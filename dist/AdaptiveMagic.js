@@ -1,10 +1,10 @@
 /*!
- * AdaptiveMagic v0.0.1 (2017-10-08)
+ * AdaptiveMagic v1.0.0 (2017-10-08)
  * The javascript library for execute code by different screen's sizes.
  * (c) 2017 Filipp Zhuravlev 
  * Project Website: https://github.com/Wishez/AdaptiveMagic
  * 
- * @version 0.0.1
+ * @version 1.0.0
  * @license Dual licensed under MIT license and GPL.
  * @author Filipp Zhuravlev - shiningfinger@list.ru
  *
@@ -31,13 +31,12 @@
    * @private
    */
   const _assert = ( condition, message ) => {
-        if (condition) 
-             throw Error(message)
+        if (condition)  throw Error(message)
   }
   /*
    * @private
    */
-  const _insistentOf = ( value, type ) => typeof value === type;
+  const _isinstanceOf = ( value, type ) => typeof value === type;
   /*
    * @private
    */
@@ -123,13 +122,13 @@
     /*
       Check the range of breakpoint.
      */
-    if ( _insistentOf( breakpoint, 'object' ) ) {
+    if ( _isinstanceOf( breakpoint, 'object' ) ) {
       /* 
        * Alert for not allowed type of breakpoint's name 
        * or void of the that value about.
        */
         _assert( 
-          ( !_insistentOf( breakpoint.name, 'string' ) &&
+          ( !_isinstanceOf( breakpoint.name, 'string' ) &&
             !breakpoint.name.length), 
           "The object breakpoint must have name is type of strint, and it must be named."
         )
