@@ -1,2 +1,2 @@
 # AdaptiveMagic
-Execude your code by different screen's sizes.
+Execute your code by different screen's sizes.
