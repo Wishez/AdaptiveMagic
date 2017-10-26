@@ -80,11 +80,20 @@
   ```
   
   But you can custom **yours own breakpoints** and execute your code when browser's window **is resized** just user a plain object instead a default breakpoint name:
-    `{
-      name: String, ー The name need for doesn't repeat code by same screen's width when the page is resized. It's required.
-      min: Number, ー A min value of screen's width.
-      max: Number ー A max value of screen's width.
-    }`
+  
+    ```javascript 
+    const xsToLg = {
+    	name: 'xsToLg',
+	min: 779,
+	max: 1200
+    };
+    ```
+    
+    1. The name is needed for not repeating code by same screen's width when the page is resized. It's required.
+    
+    2. A min value is a min value of a screen's width.
+    
+    3. A max value is  a screen's width's max value.
     
     You can leave **one of** min or max. It means, code will execute　－ while a screen's width isn't max, or a screen's width isn't min, but one of them is necessery, otherwise, you won't get the magic effect. Keep in mind!
     
