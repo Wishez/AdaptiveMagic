@@ -1,5 +1,7 @@
-let lodash = require('lodash');
+const _ =  require('lodash');
 
-exports.printMsg = function() {
-	console.log('It\'s loaded!');
-}
+const AM = require('./dist/AdaptiveMagic.js');
+
+exports.doBy = AM.doBy;
+
+exports.changeLimitationMode = AM.changeLimitationMode;

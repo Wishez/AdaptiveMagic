@@ -1,8 +1,8 @@
 {
   "name": "adaptivemagic",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The plugin for execuding JS code by different screen's breakpoints.",
-  "main": "index.js",
+  "main": "/dist/AdaptiveMagic.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Wishez/AdaptiveMagic/issues"
   },
-  "homepage": "https://github.com/Wishez/AdaptiveMagic#readme"
+  "homepage": "https://github.com/Wishez/AdaptiveMagic#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
