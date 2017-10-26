@@ -101,14 +101,16 @@
   ```javascript
   
     window.addEventListener('load', function() { 
+      const xsToAlmostMd = {
+      	  name: 'xsToAlmostMd',
+          min: 799,
+          max: 850
+      };
+      
       window.addEventListener('resize', function() {
-  
+  	  
           AM.doBy(
-            {
-              name: 'xsToAlmostMd',
-              min: 799,
-              max: 850
-            }, 
+	    xsToAlmostMd,
             () => {
               // Func from last example.
               changeContent(
@@ -124,28 +126,29 @@
   Use function  **AM.changeLimitationMode**.
   
   ```javascript
-    window.addEventListener('load', function() { 
+  window.addEventListener('load', function() { 
       window.addEventListener('resize', function() {
   
           AM.doBy('sm', () => {
-			      changeContent(
-				      'Cahnge text by Small screen.'
-			      );
-            
-            console.log('It limits the execution when the screen\'s width same.');
-			      AM.changeLimitationMode(true);
-		      });
+	      changeContent(
+		      'Cahnge text by Small screen.'
+	      );
+    
+	      console.log('It limits the execution when the screen\'s width same.');
+	      AM.changeLimitationMode(true);
+      	  }); // end doBy sm
           
-		      AM.doBy('xs', () => {
-			      changeContent(
-				      'Cahnge text by Extra-small screen.'
-			      );
+          AM.doBy('xs', () => {
+	      changeContent(
+		      'Cahnge text by Extra-small screen.'
+	      );
           
-			      console.log('The Code by xs screen\'s width will be calling very often.');
-			      AM.changeLimitationMode(false);
-		      }); 
-      })// end resize event
-    }); // end load event
+	      console.log('The Code by xs screen\'s width will be calling very often.');
+	      AM.changeLimitationMode(false);
+      	}); // end doBy xs 
+      }) // end resize event
+      
+  }); // end load event
   ```
   
   # About author
