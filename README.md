@@ -1,18 +1,22 @@
 # What is AdaptiveMagic?
 
-   Adaptive Magic is a magic tool giving you to execude your code by different screen's widht sizes in JavaScript code. You can think about like media queries in CSS but only in JS.
+   Adaptive Magic is a magic tool giving you to execude your code **by different screen's widht sizes** in JavaScript code. You can think about like **breakpoints for media queries** in CSS but only in JavaScript.
 
 # Install
   
   It's easy!
+  
   `npm i --save adaptivemagic`
   
 # Examples
 
 
   You can play around on dev-server with completed examples just folow this instructions.
-  1. Clone the repository: `git clone https://github.com/Wishez/AdaptiveMagic.git`.
-  2. Open a console, go to the "test" folder in the clopied repository `cd path/to/repo/test`, run `npm i`, and wait. 
+  
+  1. Clone the repository　－ `git clone https://github.com/Wishez/AdaptiveMagic.git`.
+  
+  2. Open a console, go to the "test" folder in the clopied repository － `cd path/to/repo/test`, run `npm i`, and wait. 
+  
   3. A last step is to run simple command ー gulp.
   
   The files, you can change and play, is placed in src folder.
@@ -23,14 +27,18 @@
 # Usage
   
   Import it:
+  
   `import AM from 'adaptivemagic';`
+  
   or use
+  
   `const AM = require('adaptivemagic');` 
   
   The Adaptive Magic has magic **breakpoints by default**:
   
   ```javascript
-    // The page loading
+  
+  // The page loading  
   window.addEventListener('load', function() {
       const $testBlock = document.getElementById('#testBlock');  
       const changeContent = text => {
@@ -39,35 +47,35 @@
       
       // And code is executing
     
-      AM.doBy('lgUp', () => {
-  			changeContent(
-	  			'Cahnge text by Large and Up screen's width.'
-	  		);
-		  }); // end doBy lgUp
+	AM.doBy('lgUp', () => {
+		changeContent(
+			'Cahnge text by Large and Up screen\'s width.'
+		);
+	}); // end doBy lgUp
       
-		  AM.doBy('md', () => {
-			   changeContent(
-				  'Cahnge text by Medium screen.'
-         );
-		  }); // end doBy md
+	AM.doBy('md', () => {
+		changeContent(
+			  'Cahnge text by Medium screen.'
+		);
+	}); // end doBy md
     
-		  AM.doBy('sm', () => {
-			  changeContent(
-				  'Cahnge text by Small screen.'
-			  );
-		  }); // end doBy sm
+  	AM.doBy('sm', () => {
+		changeContent(
+			'Cahnge text by Small screen.'
+		);
+  	}); // end doBy sm
       
-      AM.doBy('xs', () => {
-			  changeContent(
-				  'Cahnge text by Extra-small screen.'
-			  );
-		  }); // end doBy xs
+	AM.doBy('xs', () => {
+		changeContent(
+			'Cahnge text by Extra-small screen.'
+	  	);
+  	}); // end doBy xs
       
-      AM.doBy('xxs', () => {
-			  changeContent(
-				  'Cahnge text by Extra-extra-small screen.'
-			  );
-		  }); // end doBy xxs    
+      	AM.doBy('xxs', () => {
+		changeContent(
+			'Cahnge text by Extra-extra-small screen.'
+		);
+	}); // end doBy xxs    
   });
   ```
   
@@ -82,6 +90,7 @@
     
     
   ```javascript
+  
     window.addEventListener('load', function() { 
       window.addEventListener('resize', function() {
   
