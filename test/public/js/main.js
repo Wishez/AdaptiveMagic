@@ -97,8 +97,9 @@
     * @public
     */
     AdaptiveMagic.changeLimitationMode = isLimited => {
+        console.log(isLimited)
         _assert(
-            typeof isLimited !== 'bool',
+            typeof isLimited !== 'boolean',
             'First argument must be a value of Boolean type.'
         );
 
@@ -251,8 +252,6 @@
 const _ =  require('lodash');
 
 const AM = require('./dist/AdaptiveMagic.js');
-
-// exports.setBreakpoints  = AM.setBreakpoints;
 
 exports.doBy = AM.doBy;
 
@@ -24901,20 +24900,20 @@ window.addEventListener('load', function () {
 		min: 800,
 		max: 850
 	}, function () {
-		changeContent('It show content when the screen\'s widht is between 800px and 850px.', 'https://kilkennycat.files.wordpress.com/2015/10/img_20151009_0002.jpg');
+		changeContent('It shows content when the screen\'s widht is between 800px and 850px.', 'https://kilkennycat.files.wordpress.com/2015/10/img_20151009_0002.jpg');
 	});
 	AM.doBy({
 		name: 'mdUp',
 		min: 991
 	}, function () {
-		changeContent('It show content when the screen\'s widht is more than 991px but not 991px.', 'https://s-media-cache-ak0.pinimg.com/564x/43/42/74/4342743565d9a2dc7f40838db0770cd5.jpg');
+		changeContent('It shows content when the screen\'s widht is more than 991px but not 991px.', 'https://s-media-cache-ak0.pinimg.com/564x/43/42/74/4342743565d9a2dc7f40838db0770cd5.jpg');
 	});
 	AM.doBy({
 		name: 'xxs',
 		min: 0,
 		max: 450
 	}, function () {
-		changeContent('It show content when the screen\'s widht is less than 450px, but not 450px.', 'https://kilkennycat.files.wordpress.com/2016/09/img_20160829_0001-1.jpg?w=656');
+		changeContent('It shows content when the screen\'s widht is less than 450px, but not 450px.', 'https://kilkennycat.files.wordpress.com/2016/09/img_20160829_0001-1.jpg?w=656');
 	});
 	window.addEventListener('resize', function () {
 		AM.doBy('lgUp', function () {
@@ -24925,9 +24924,12 @@ window.addEventListener('load', function () {
 		});
 		AM.doBy('sm', function () {
 			changeContent('Cahnge text by Small screen.', 'https://s-media-cache-ak0.pinimg.com/originals/62/68/b7/6268b71095cf60af2402ff9482c3f06b.jpg');
+			AM.changeLimitationMode(true);
 		});
 		AM.doBy('xs', function () {
 			changeContent('Cahnge text by Extra-small screen.', 'http://pm1.narvii.com/6370/8fa49a28fdcc44542279d910e8bd1ef0a923043a_hq.jpg');
+			console.log('The Code by xs width will be calling very friquantly.');
+			AM.changeLimitationMode(false);
 		});
 		AM.doBy('xxs', function () {
 			changeContent('Cahnge text by Extra-extra-small screen.', 'http://catsfineart.com/assets/images/cats/CatPortrait/db_Denise_Laurent711.jpg');

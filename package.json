@@ -1,6 +1,6 @@
 {
   "name": "adaptivemagic",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "The plugin for execuding JS code by different screen's breakpoints.",
   "main": "/dist/AdaptiveMagic.js",
   "scripts": {

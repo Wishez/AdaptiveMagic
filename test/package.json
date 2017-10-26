@@ -1,6 +1,6 @@
 {
   "name": "TestAdaptiveMagic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Example of using adaptive magic.",
   "author": "Filipp Zhuravlev",
   "license": "ISC",
@@ -52,6 +52,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "adaptivemagic": "^1.0.3",
     "babel-polyfill": "^6.23.0",
     "es6-error": "^4.0.2",
     "gulp-image": "^2.10.0",

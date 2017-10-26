@@ -97,7 +97,7 @@
     */
     AdaptiveMagic.changeLimitationMode = isLimited => {
         _assert(
-            typeof isLimited !== 'bool',
+            typeof isLimited !== 'boolean',
             'First argument must be a value of Boolean type.'
         );
 
