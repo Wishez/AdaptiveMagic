@@ -53,8 +53,8 @@
     let _breakpoints = {
         lgLess: 1600,
         lg: {
-          min: 1600,
-          max: 1199
+          min: 1199,
+          max: 1600
         },
         lgUp: 1199,
         mdLess: 1200,
