@@ -35,8 +35,8 @@
   `const AM = require('adaptivemagic');` 
   
   The Adaptive Magic has magic **breakpoints by default**:
-  
-  ```javascript
+
+```javascript
   
   // The page loading  
   window.addEventListener('load', function() {
@@ -77,17 +77,17 @@
 		);
 	}); // end doBy xxs    
   });
-  ```
+```
   
   But you can custom **yours own breakpoints** and execute your code when browser's window **is resized** just user a plain object instead a default breakpoint name:
   
-    ```javascript 
+```javascript 
     const xsToLg = {
     	name: 'xsToLg',
 	min: 779,
 	max: 1200
     };
-    ```
+```
     
     1. The name is needed for not repeating code by same screen's width when the page is resized. It's required.
     
@@ -98,7 +98,7 @@
     You can leave **one of** min or max. It means, code will execute　－ while a screen's width isn't max, or a screen's width isn't min, but one of them is necessery, otherwise, you won't get the magic effect. Keep in mind!
     
     
-  ```javascript
+```javascript
   
     window.addEventListener('load', function() { 
       const xsToAlmostMd = {
@@ -120,12 +120,12 @@
         ); // end doBy
       }); // end resize event
     }); // end load event
-  ```
+```
   
   And last thing is to execute code ever by a set breakpoint when a screen's width will be changed. 
   Use function  **AM.changeLimitationMode**.
   
-  ```javascript
+```javascript
   window.addEventListener('load', function() { 
       window.addEventListener('resize', function() {
   
@@ -149,7 +149,7 @@
       }) // end resize event
       
   }); // end load event
-  ```
+```
   
   # About author
   
